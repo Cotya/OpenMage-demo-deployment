@@ -1,0 +1,22 @@
+{
+  "name": "cotya/openmage-demo",
+  "require": {
+    "aydin-hassan/magento-core-composer-installer": "*",
+    "openmage/magento-lts": "1.9.4.x-dev",
+    "magento-hackathon/magento-composer-installer": "*",
+    "cweagans/composer-patches": "^1.6",
+    "composer/composer": "^1.9"
+  },
+  "extra": {
+    "patches-file": "patches/composer.patches.json",
+    "magento-core-package-type": "magento-source",
+    "magento-root-dir": "magento",
+    "magento-core-deploy" : {
+      "git-ignore-append": false,
+      "git-ignore-enable": false,
+      "excludes": [
+        "app/etc/local.xml"
+      ]
+    }
+  }
+}
