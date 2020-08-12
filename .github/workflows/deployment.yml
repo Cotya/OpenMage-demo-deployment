@@ -11,7 +11,7 @@ jobs:
         with:
           name: build-artifact
           path: ./
-      - run: tar -xjvf build.tar.bz2 -C ./build
+      - run: tar -xjvf build.tar.bz2 -C ./
       - name: Run a one-line script
         run: ls -la ./ ./build
 
