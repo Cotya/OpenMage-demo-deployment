@@ -10,7 +10,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: build-artifact
-          path: build.tar..bz2
+          path: build.tar.bz2
       - run: tar -xjvf build.tar.bz2 -C ./build
       - name: Run a one-line script
         run: ls -la ./ ./build
@@ -35,6 +35,6 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: build-artifact
-          path: build.tar.gz
+          path: build.tar.bz2
 
 
