@@ -10,7 +10,8 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: build-artifact
-          path: build
+          path: build.tar..bz2
+      - run: tar -xjvf build.tar.bz2 -C ./build
       - name: Run a one-line script
         run: ls -la ./ ./build
 
@@ -30,9 +31,10 @@ jobs:
         uses: MilesChou/composer-action@v1.0.2
         with:
           args: install --working-dir=./src/
+      - run: tar -cjvf build.tar.bz2 ./src
       - uses: actions/upload-artifact@v2
         with:
           name: build-artifact
-          path: src
+          path: build.tar.gz
 
 
