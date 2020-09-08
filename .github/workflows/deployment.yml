@@ -23,12 +23,12 @@ jobs:
           REMOTE_USER: root
           TARGET: /var/www/html/github_deploy/build_${{ github.run_number }}
       - name: set symlink
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.REMOTE_HOST }}
-        username: root
-        key: ${{ secrets.OPENMAGE_DEMO_DEPLOY_RSA }}
-        script: cd /var/www/html/github_deploy/build_${{ github.run_number }} && ln -nsf htdocs/media $(realpath ../shared-files/media) &&  ln -nsf htdocs/app/etc $(realpath ../shared-files/etc)
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: root
+          key: ${{ secrets.OPENMAGE_DEMO_DEPLOY_RSA }}
+          script: cd /var/www/html/github_deploy/build_${{ github.run_number }} && ln -nsf htdocs/media $(realpath ../shared-files/media) &&  ln -nsf htdocs/app/etc $(realpath ../shared-files/etc)
       - name: set symlink
         uses: appleboy/ssh-action@master
         with:
