@@ -1,5 +1,5 @@
 #!/bin/bash
 
-ln -nsf ./htdocs/media $(realpath ../shared-files/media)
-ln -nsf ./htdocs/app/etc $(realpath ../shared-files/etc)
+ln -nsf $(realpath ../../shared-files/media) ./htdocs/media
+ln -nsf $(realpath ../../shared-files/etc) ./htdocs/app/etc
 echo "Linked Media"

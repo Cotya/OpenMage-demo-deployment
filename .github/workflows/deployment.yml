@@ -28,7 +28,7 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: root
           key: ${{ secrets.OPENMAGE_DEMO_DEPLOY_RSA }}
-          script: cd /var/www/html/github_deploy/build_${{ github.run_number }} && ln -nsf htdocs/media $(realpath ../../shared-files/media) &&  ln -nsf htdocs/app/etc $(realpath ../../shared-files/etc)
+          script: cd /var/www/html/github_deploy/build_${{ github.run_number }} && ln -nsf $(realpath ../../shared-files/media) htdocs/media &&  ln -nsf $(realpath ../../shared-files/etc) htdocs/app/etc
       - name: clean build
         uses: appleboy/ssh-action@master
         with:
