@@ -11,6 +11,7 @@ jobs:
         uses: MilesChou/composer-action@v1.0.2
         with:
           args: install --working-dir=./src/
+      - run: cd ./src && bash scripts/removeParts.sh
       - run: ls -la ./ ./src
       - name: Deploy to Cotya server
         uses: easingthemes/ssh-deploy@v2.0.7
@@ -20,6 +21,12 @@ jobs:
           SOURCE: "src/"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: root
-          TARGET: /var/www/html/github_deploy/build
-
+          TARGET: /var/www/html/github_deploy/build_${{ github.run_number }}
+      - name: set symlink
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: root
+          key: ${{ secrets.OPENMAGE_DEMO_DEPLOY_RSA }}
+          script: ln -nsf /var/www/html/github_deploy/build_${{ github.run_number }} /var/www/html/github_latest
 

@@ -10,7 +10,7 @@
   "extra": {
     "//patches-file": "patches/composer.patches.json",
     "magento-core-package-type": "magento-source",
-    "magento-root-dir": "magento",
+    "magento-root-dir": "htdocs",
     "magento-core-deploy" : {
       "git-ignore-append": false,
       "git-ignore-enable": false,
