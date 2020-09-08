@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0b3e82ea1fe7bbfaf7593a8eedc8eb5a",
+    "content-hash": "022589b5f7f8d3b9402804b0d57095a7",
     "packages": [
         {
             "name": "aydin-hassan/magento-core-composer-installer",
@@ -666,16 +666,16 @@
         },
         {
             "name": "openmage/magento-lts",
-            "version": "1.9.4.x-dev",
+            "version": "v20.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/OpenMage/magento-lts.git",
-                "reference": "a94655256e92af7c4156f8522ea8986021553c37"
+                "reference": "e878064ce20a0cdb2049598d2d362b48d6b6e866"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OpenMage/magento-lts/zipball/a94655256e92af7c4156f8522ea8986021553c37",
-                "reference": "a94655256e92af7c4156f8522ea8986021553c37",
+                "url": "https://api.github.com/repos/OpenMage/magento-lts/zipball/e878064ce20a0cdb2049598d2d362b48d6b6e866",
+                "reference": "e878064ce20a0cdb2049598d2d362b48d6b6e866",
                 "shasum": ""
             },
             "require": {
@@ -690,7 +690,7 @@
             "authors": [
                 {
                     "name": "Lee Saferite",
-                    "email": "lee.saferite@aoe.com",
+                    "email": "lee.saferite@openmage.org",
                     "role": "Maintainer"
                 },
                 {
@@ -702,10 +702,19 @@
                     "name": "David Robinson",
                     "email": "david.robinson@aoe.com",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "Tymoteusz Motylewski",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Sven Reichel",
+                    "email": "github-sr@hotmail.com",
+                    "role": "Maintainer"
                 }
             ],
             "description": " A fork of Magento-1 that is accepting bug fixes (backward compatible, drop in replacement for official Magento)",
-            "time": "2020-05-19T10:19:13+00:00"
+            "time": "2020-08-18T18:33:50+00:00"
         },
         {
             "name": "psr/log",
@@ -1244,11 +1253,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "openmage/magento-lts": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
 }

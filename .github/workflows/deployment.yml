@@ -49,5 +49,5 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: root
           key: ${{ secrets.OPENMAGE_DEMO_DEPLOY_RSA }}
-          script: cd /var/www/html/github_deploy/ && ls -t | tail -n +4 | xargs rm --
+          script: cd /var/www/html/github_deploy/ && ls -t | tail -n +4 | xargs rm -r --
 
