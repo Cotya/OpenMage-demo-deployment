@@ -28,7 +28,7 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: root
           key: ${{ secrets.OPENMAGE_DEMO_DEPLOY_RSA }}
-          script: cd /var/www/html/github_deploy/build_${{ github.run_number }} && ln -nsf $(realpath ../../shared-files/media) htdocs/media &&  ln -nsf $(realpath ../../shared-files/etc) htdocs/app/etc
+          script: cd /var/www/html/github_deploy/build_${{ github.run_number }} && rm -rf htdocs/media htdocs/app/etc && ln -nsf $(realpath ../../shared-files/media) htdocs/media &&  ln -nsf $(realpath ../../shared-files/etc) htdocs/app/etc
       - name: clean build
         uses: appleboy/ssh-action@master
         with:
@@ -43,4 +43,11 @@ jobs:
           username: root
           key: ${{ secrets.OPENMAGE_DEMO_DEPLOY_RSA }}
           script: ln -nsf /var/www/html/github_deploy/build_${{ github.run_number }} /var/www/html/github_latest
+      - name: clean old deployments
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: root
+          key: ${{ secrets.OPENMAGE_DEMO_DEPLOY_RSA }}
+          script: cd /var/www/html/github_deploy/ && ls -t | tail -n +4 | xargs rm --
 
