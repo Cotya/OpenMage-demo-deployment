@@ -8,9 +8,10 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Composer Install
-        uses: MilesChou/composer-action@v1.0.2
+        uses: php-actions/composer@v2
         with:
-          args: install --working-dir=./src/
+          command: install
+          only_args: --working-dir=./src/
       - run: cd ./src && bash scripts/removeParts.sh
       - run: ls -la ./ ./src
       - name: Deploy to Cotya server
