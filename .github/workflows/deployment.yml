@@ -11,7 +11,7 @@ jobs:
         uses: php-actions/composer@v2
         with:
           command: install
-          only_args: --working-dir=./src/
+          args: --working-dir=./src/
       - run: cd ./src && bash scripts/removeParts.sh
       - run: ls -la ./ ./src
       - name: Deploy to Cotya server
