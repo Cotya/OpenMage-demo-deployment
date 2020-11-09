@@ -3,9 +3,9 @@
   "require": {
     "aydin-hassan/magento-core-composer-installer": "*",
     "openmage/magento-lts": "20.*",
-    "magento-hackathon/magento-composer-installer": "*",
+    "magento-hackathon/magento-composer-installer": "4.0.1 as 3.2.3",
     "cweagans/composer-patches": "^1.6",
-    "composer/composer": "^1.9"
+    "composer/composer": "^2"
   },
   "extra": {
     "//patches-file": "patches/composer.patches.json",
