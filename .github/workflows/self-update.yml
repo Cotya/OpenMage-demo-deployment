@@ -26,8 +26,8 @@ jobs:
       - run: git add src/composer.json src/composer.lock
       - name: "git Push"
         run: |
-          git commit -m "workflow selfupdate with target ${{ github.event.inputs.target }}"
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git commit -m "workflow selfupdate with target ${{ github.event.inputs.target }}"
           git push
 
