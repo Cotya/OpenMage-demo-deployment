@@ -4,31 +4,31 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c9d2046f64c262ed81735aa29e2a979",
+    "content-hash": "9ee722ace6fe340ffe5fde1a2cee9468",
     "packages": [
         {
             "name": "aydin-hassan/magento-core-composer-installer",
-            "version": "2.0.0",
+            "version": "dev-patch-1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/AydinHassan/magento-core-composer-installer.git",
-                "reference": "03e455b9ee75bcb917752eb163a54d66fefb73d6"
+                "url": "https://github.com/Flyingmana/magento-core-composer-installer.git",
+                "reference": "ee091f9c9e28dadbeb1b4481ad0a053d264bc9c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AydinHassan/magento-core-composer-installer/zipball/03e455b9ee75bcb917752eb163a54d66fefb73d6",
-                "reference": "03e455b9ee75bcb917752eb163a54d66fefb73d6",
+                "url": "https://api.github.com/repos/Flyingmana/magento-core-composer-installer/zipball/ee091f9c9e28dadbeb1b4481ad0a053d264bc9c5",
+                "reference": "ee091f9c9e28dadbeb1b4481ad0a053d264bc9c5",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.0",
-                "php": "^7.0"
+                "php": "^8.0"
             },
             "require-dev": {
                 "composer/composer": "^2.0",
                 "mikey179/vfsstream": "~1.4",
-                "phpunit/phpunit": "~4.3",
-                "squizlabs/php_codesniffer": "~1.5"
+                "phpunit/phpunit": "^9.0",
+                "squizlabs/php_codesniffer": "~3.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -39,7 +39,11 @@
                     "AydinHassan\\MagentoCoreComposerInstaller\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "AydinHassan\\MagentoCoreComposerInstallerTest\\": "test/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -51,10 +55,9 @@
             ],
             "description": "A composer plugin for managing Magento Core",
             "support": {
-                "issues": "https://github.com/AydinHassan/magento-core-composer-installer/issues",
-                "source": "https://github.com/AydinHassan/magento-core-composer-installer/tree/2.0.0"
+                "source": "https://github.com/Flyingmana/magento-core-composer-installer/tree/patch-1"
             },
-            "time": "2020-11-06T12:54:07+00:00"
+            "time": "2021-05-04T18:37:48+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -2097,19 +2100,17 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [
-        {
-            "package": "magento-hackathon/magento-composer-installer",
-            "version": "4.0.1.0",
-            "alias": "3.2.3",
-            "alias_normalized": "3.2.3.0"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "aydin-hassan/magento-core-composer-installer": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
+    "platform-overrides": {
+        "php": "8.0"
+    },
     "plugin-api-version": "2.0.0"
 }

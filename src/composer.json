@@ -1,11 +1,23 @@
 {
   "name": "cotya/openmage-demo",
   "require": {
-    "aydin-hassan/magento-core-composer-installer": "*",
+    "aydin-hassan/magento-core-composer-installer": "dev-patch-1",
     "openmage/magento-lts": "20.*",
-    "magento-hackathon/magento-composer-installer": "4.0.1 as 3.2.3",
+    "magento-hackathon/magento-composer-installer": "*",
     "cweagans/composer-patches": "^1.6",
     "composer/composer": "^2"
+  },
+  "repositories":
+  [
+    {
+      "type": "vcs",
+      "url": "https://github.com/Flyingmana/magento-core-composer-installer"
+    }
+  ],
+  "config": {
+    "platform": {
+        "php": "8.0"
+    }
   },
   "extra": {
     "//patches-file": "patches/composer.patches.json",
