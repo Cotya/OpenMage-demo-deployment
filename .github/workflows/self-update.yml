@@ -1,0 +1,22 @@
+name: "Deployment"
+on:
+  workflow_dispatch:
+    inputs:
+      target: '20.*'
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Composer Install
+        uses: php-actions/composer@v2
+        with:
+          command: install
+          args: --working-dir=./src/
+      - name: Composer update
+        uses: php-actions/composer@v2
+        with:
+          command: update
+          args: --working-dir=./src/ --with openmage/magento-lts:${{ github.event.inputs.target }}
