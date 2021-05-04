@@ -854,16 +854,16 @@
         },
         {
             "name": "openmage/magento-lts",
-            "version": "v20.0.8",
+            "version": "v20.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/OpenMage/magento-lts.git",
-                "reference": "89e1c6f376e79675b82a37a6946dc696d9cad6ef"
+                "reference": "d1c7b4bb8ad806b50e510c20db783861c6735f82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OpenMage/magento-lts/zipball/89e1c6f376e79675b82a37a6946dc696d9cad6ef",
-                "reference": "89e1c6f376e79675b82a37a6946dc696d9cad6ef",
+                "url": "https://api.github.com/repos/OpenMage/magento-lts/zipball/d1c7b4bb8ad806b50e510c20db783861c6735f82",
+                "reference": "d1c7b4bb8ad806b50e510c20db783861c6735f82",
                 "shasum": ""
             },
             "require": {
@@ -905,9 +905,9 @@
             "description": "A fork of Magento-1 that is accepting bug fixes (backward compatible, drop in replacement for official Magento)",
             "support": {
                 "issues": "https://github.com/OpenMage/magento-lts/issues",
-                "source": "https://github.com/OpenMage/magento-lts/tree/v20.0.8"
+                "source": "https://github.com/OpenMage/magento-lts/tree/v20.0.10"
             },
-            "time": "2021-04-06T07:00:41+00:00"
+            "time": "2021-04-20T22:03:49+00:00"
         },
         {
             "name": "psr/container",
