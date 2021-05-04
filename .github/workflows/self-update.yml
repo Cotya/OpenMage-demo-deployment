@@ -1,4 +1,4 @@
-name: "Deployment"
+name: "Self Update"
 on:
   workflow_dispatch:
     inputs:
@@ -23,3 +23,10 @@ jobs:
         with:
           command: update
           args: --working-dir=./src/ --with openmage/magento-lts:${{ github.event.inputs.target }}
+      - run: git add composer.json composer.lock
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -m "workflow selfupdate with target ${{ github.event.inputs.target }}"
+          git push
+
