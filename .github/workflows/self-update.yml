@@ -2,7 +2,10 @@ name: "Deployment"
 on:
   workflow_dispatch:
     inputs:
-      target: '20.*'
+      target:
+        description: 'Target Version'
+        required: true
+        default: '20.*'
 
 
 jobs:
