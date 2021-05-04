@@ -18,6 +18,7 @@ jobs:
         with:
           command: install
           args: --working-dir=./src/
+      - run: echo ${{env.GITHUB_REF}}
       - name: Composer update
         uses: php-actions/composer@v2
         with:
