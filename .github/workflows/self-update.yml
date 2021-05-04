@@ -13,12 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+      - run: env
+      - run: echo "${{env.GITHUB_REF}}"
+      - run: echo $GITHUB_REF
       - name: Composer Install
         uses: php-actions/composer@v2
         with:
           command: install
           args: --working-dir=./src/
-      - run: echo ${{env.GITHUB_REF}}
       - name: Composer update
         uses: php-actions/composer@v2
         with:
